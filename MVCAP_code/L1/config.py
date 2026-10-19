@@ -1,0 +1,24 @@
+from pathlib import Path
+
+
+ROOT_DIR = Path(__file__).resolve().parents[2]
+DATASET_ROOT = ROOT_DIR / "dataset" / "L1_text_dataset_rigid_drift"
+METADATA_JSON = DATASET_ROOT / "dataset_metadata.json"
+
+DEFAULT_NUM_SAMPLES = 200
+SEED = 42
+
+VIDEO_WIDTH = 488
+VIDEO_HEIGHT = 488
+FPS = 30
+DURATION = 3.0
+TOTAL_FRAMES = int(FPS * DURATION)
+
+TEXT_LENGTH = 4
+ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+
+DOT_COVERAGE = 0.15
+DOT_RADIUS = 2
+BG_SPEED = 2
+FG_SPEED = -2
+NUM_DISTRACTORS = 5

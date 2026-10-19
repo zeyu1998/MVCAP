@@ -1,0 +1,1 @@
+"""Coherent motion CAPTCHA generation."""

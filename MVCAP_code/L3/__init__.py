@@ -1,0 +1,1 @@
+"""Biological motion CAPTCHA generation."""

@@ -1,0 +1,4 @@
+-r requirements.txt
+trimesh>=4,<5
+pyrender==0.1.45
+pyglet==2.1.19

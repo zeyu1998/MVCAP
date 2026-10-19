@@ -1,0 +1,3 @@
+-r requirements-rendering.txt
+torch>=2.1,<3
+smplx==0.1.28
