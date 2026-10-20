@@ -21,25 +21,28 @@ runners.
 
 ## Examples
 
-Watch the same instance with dynamic background camouflage (**left**) and
-its matched foreground-only control (**right**). Each pair plays together
-in a three-second loop at the original speed.
+Read each row from left to right: **Semantic Target**, **MVCAP-Bench**, and
+**MVCAP-Bench-FG**. A static target image explains the two synchronized
+motion stimuli, which play in a three-second loop at the original speed.
 
 ### L1 · Coherent motion: text
 
-![L1 coherent motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target WAJH.](docs/examples/l1-main-vs-fg.gif)
+![L1 coherent motion: semantic target CAPTCHA, the motion-defined challenge, and its foreground-only control.](docs/examples/l1-main-vs-fg.gif)
 
 [View the 30 fps video](docs/examples/l1-main-vs-fg.mp4)
 
+The seven-letter word **CAPTCHA** is a custom illustration generated for this
+gallery. The standard L1 benchmark uses four-character targets.
+
 ### L2 · Structural motion: object
 
-![L2 structural motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target chair.](docs/examples/l2-main-vs-fg.gif)
+![L2 structural motion: a motorbike semantic target, the motion-defined challenge, and its foreground-only control.](docs/examples/l2-main-vs-fg.gif)
 
 [View the 30 fps video](docs/examples/l2-main-vs-fg.mp4)
 
 ### L3 · Biological motion: action
 
-![L3 biological motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target jump.](docs/examples/l3-main-vs-fg.gif)
+![L3 biological motion: a kicking human semantic target, the motion-defined challenge, and its foreground-only control.](docs/examples/l3-main-vs-fg.gif)
 
 [View the 30 fps video](docs/examples/l3-main-vs-fg.mp4)
 

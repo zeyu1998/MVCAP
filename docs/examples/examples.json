@@ -1,128 +1,214 @@
 [
   {
     "level": "L1",
-    "sample_id": "L1_000",
-    "target": "WAJH",
+    "sample_id": "L1_CAPTCHA_showcase",
+    "target": "CAPTCHA",
+    "in_frozen_benchmark": false,
+    "generation": {
+      "script": "generate_l1_showcase.py",
+      "seed": 42,
+      "text": "CAPTCHA",
+      "text_length": 7,
+      "standard_benchmark_text_length": 4,
+      "foreground_texture_identical_between_conditions": true
+    },
+    "semantic_source": {
+      "type": "solid_text_mask",
+      "text": "CAPTCHA"
+    },
+    "column_order": [
+      "Semantic Target",
+      "MVCAP-Bench",
+      "MVCAP-Bench-FG"
+    ],
+    "semantic_target_is_static": true,
     "source_condition": "rigid_drift",
-    "source_frames": 90,
-    "source_fps": 30,
-    "duration_seconds": 3,
     "source_size": [
       488,
       488
     ],
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
     "gif_size": [
-      768,
+      1152,
       480
     ],
     "gif_frames": 60,
     "gif_fps": 20,
+    "gif_frame_delay_ms": 50,
     "mp4_size": [
-      1024,
+      1536,
       640
     ],
     "mp4_frames": 90,
     "mp4_fps": 30,
     "gif": "l1-main-vs-fg.gif",
     "mp4": "l1-main-vs-fg.mp4",
-    "gif_frame_delay_ms": 50,
-    "gif_max_frame_mean_absolute_error_rgb": 0.13340928819444445,
+    "semantic_image": "l1-semantic-target.png",
+    "all_90_source_frames_compared_in_both_mp4_panels": true,
+    "mp4_max_source_frame_mean_absolute_error_rgb": 1.9171845606019886,
+    "mp4_max_semantic_image_mean_absolute_error_rgb": 1.927363276001075,
     "gif_all_frames_compared_to_resampled_mp4": true,
+    "gif_max_frame_mean_absolute_error_rgb": 0.030879267939814815,
     "source_sha256": {
-      "main": "cc720d7cc7faa3d3d19759a2f2a3b2a742d655cc40f151165bb4a6676d70f8e3",
-      "foreground_only": "61c1d716824625672e88d12745f4e7e725251032ef3ae14621f319ca26b002d7"
+      "main": "60d398611e00705cae3e1d5d6dfd0855e54e50470621c2d148a03cd76061db6a",
+      "foreground_only": "ca42b96988b5ccb773fd5e157ae17666965eb4fee850e0ae44b6abc5fa2d5f9c"
     },
     "preview_sha256": {
-      "gif": "a1a491abd295c04031235bbe32b95fa4fb70d66437f7dc4cb88d5ebbbdc10531",
-      "mp4": "6cfafee4b1da9aa951a5ec7f0942e6ba04a5531d312c4477756bd1d9fb9f337c"
+      "l1-main-vs-fg.gif": "4eb8b1c858a4b78e9248d58eac9b72891a1ed7606116e00e8253a0a23563ff4e",
+      "l1-main-vs-fg.mp4": "bfc8fd09a83fa153cf5f42cc9885c846372e50b8a8154e99074a4e79a7536c0b",
+      "l1-semantic-target.png": "f353c3efd8858877805256167fa38ede96c2c1feddc182663587f6fdbfea2394"
     },
     "file_bytes": {
-      "gif": 5302469,
-      "mp4": 3477409
+      "l1-main-vs-fg.gif": 5636558,
+      "l1-main-vs-fg.mp4": 3316037,
+      "l1-semantic-target.png": 2137
     }
   },
   {
     "level": "L2",
-    "sample_id": "CHAIR_00",
-    "target": "CHAIR",
+    "sample_id": "MOTORBIKE_07",
+    "target": "MOTORBIKE",
+    "in_frozen_benchmark": true,
+    "correct_option_id": "MOTORBIKE::6b6cf38ed305dc11ab13c10f92a32fc1",
+    "source_records": [
+      "vqa_bundle/main_experiment/L2_200_vqa.json",
+      "vqa_bundle/ablation_A_foreground_only/L2_200_vqa.json"
+    ],
+    "semantic_source": {
+      "type": "matched_object_thumbnail",
+      "path": "dataset/L2_shapenet_rigid_drift/thumbnails/MOTORBIKE/MOTORBIKE_07.png",
+      "model_id": "6b6cf38ed305dc11ab13c10f92a32fc1",
+      "sha256": "3d3dcc7e82b80c83928f48146d3cd28cb75663aef89459f9c29bc77bbd153b75",
+      "presentation": "Original RGBA thumbnail composited on white, without resizing."
+    },
+    "column_order": [
+      "Semantic Target",
+      "MVCAP-Bench",
+      "MVCAP-Bench-FG"
+    ],
+    "semantic_target_is_static": true,
     "source_condition": "rigid_drift",
-    "source_frames": 90,
-    "source_fps": 30,
-    "duration_seconds": 3,
     "source_size": [
       448,
       448
     ],
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
     "gif_size": [
-      768,
+      1152,
       480
     ],
     "gif_frames": 60,
     "gif_fps": 20,
+    "gif_frame_delay_ms": 50,
     "mp4_size": [
-      1024,
+      1536,
       640
     ],
     "mp4_frames": 90,
     "mp4_fps": 30,
     "gif": "l2-main-vs-fg.gif",
     "mp4": "l2-main-vs-fg.mp4",
-    "gif_frame_delay_ms": 50,
-    "gif_max_frame_mean_absolute_error_rgb": 0.11109754774305555,
+    "semantic_image": "l2-semantic-target.png",
+    "all_90_source_frames_compared_in_both_mp4_panels": true,
+    "mp4_max_source_frame_mean_absolute_error_rgb": 1.8992695711096939,
+    "mp4_max_semantic_image_mean_absolute_error_rgb": 1.990936856131864,
     "gif_all_frames_compared_to_resampled_mp4": true,
+    "gif_max_frame_mean_absolute_error_rgb": 0.12864824459876542,
     "source_sha256": {
-      "main": "8694e91f9994274b4a6c118afa3f38b07aea1b56d11022d642aa163b058adc80",
-      "foreground_only": "c1ef2d88aa1098c8c5e67518a04ade8db3657e56ef72e33c061332523cbdc42b"
+      "main": "8e0bc6f54f5a48a7c494df6a7b15bf6f5748507a54826502311b962fc6e46c2e",
+      "foreground_only": "a313ef19480ce2fb420b27c7e951e1c51b0e1c6e5590a504c04bc778df0d26ca"
     },
     "preview_sha256": {
-      "gif": "3a1fb21bd4265ee8c0f467a69784c1ec721c74f3a083bd31734981f0265f44ee",
-      "mp4": "ed31c53aad5de2c4d7eda6ba50f488bf3a07fe817d63cfa91ae024d3e6352809"
+      "l2-main-vs-fg.gif": "d7e6398513aadc8e363cc4ca7c0cf74a48ac2d5b2eadaeb38157cc42f8b3eff9",
+      "l2-main-vs-fg.mp4": "256094427044126a7cabbc2128f21bf463b4adb536a0fa91968462d88404bf27",
+      "l2-semantic-target.png": "cadf72898dfa6a73b3f99e98a4a2bc289dcd00417d3d36f6e68da54f8936c457"
     },
     "file_bytes": {
-      "gif": 5087550,
-      "mp4": 3151909
+      "l2-main-vs-fg.gif": 4824670,
+      "l2-main-vs-fg.mp4": 3228590,
+      "l2-semantic-target.png": 60403
     }
   },
   {
     "level": "L3",
-    "sample_id": "jump_90_07_poses_01",
-    "target": "jump",
+    "sample_id": "kick_90_05_poses_03",
+    "target": "kick",
+    "in_frozen_benchmark": true,
+    "correct_option_id": "kick_90_05_poses_03",
+    "source_records": [
+      "vqa_bundle/main_experiment/L3_200_vqa.json",
+      "vqa_bundle/ablation_A_foreground_only/L3_200_vqa.json"
+    ],
+    "semantic_source": {
+      "type": "matched_smpl_pose_render",
+      "frame_index_zero_based": 40,
+      "motion_segment": {
+        "local_relpath": "CMU/90/90_05_poses.npz",
+        "start_t": 0.0,
+        "end_t": 4.275
+      },
+      "pose_loader": "MVCAP_code/L3/generate_l3_from_selection_rigid_drift.py:load_segment",
+      "corresponding_option_video": "dataset/L3_selected_generated_rigid_drift/library/L3_kick_90_05_poses_03_Option.mp4",
+      "corresponding_option_video_sha256": "b0eb3740e142077b29e12894e2a1eb879fa2b973569f23bcb9baff1ff7d074a2",
+      "render_size": [
+        976,
+        976
+      ],
+      "body_model": "SMPL neutral",
+      "presentation": "Same motion segment and normalized pose 40 as the target option, rendered on white; body fitted within 390 x 390 in a 488 x 488 image."
+    },
+    "column_order": [
+      "Semantic Target",
+      "MVCAP-Bench",
+      "MVCAP-Bench-FG"
+    ],
+    "semantic_target_is_static": true,
     "source_condition": "rigid_drift",
-    "source_frames": 90,
-    "source_fps": 30,
-    "duration_seconds": 3,
     "source_size": [
       448,
       448
     ],
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
     "gif_size": [
-      768,
+      1152,
       480
     ],
     "gif_frames": 60,
     "gif_fps": 20,
+    "gif_frame_delay_ms": 50,
     "mp4_size": [
-      1024,
+      1536,
       640
     ],
     "mp4_frames": 90,
     "mp4_fps": 30,
     "gif": "l3-main-vs-fg.gif",
     "mp4": "l3-main-vs-fg.mp4",
-    "gif_frame_delay_ms": 50,
-    "gif_max_frame_mean_absolute_error_rgb": 0.02966941550925926,
+    "semantic_image": "l3-semantic-target.png",
+    "all_90_source_frames_compared_in_both_mp4_panels": true,
+    "mp4_max_source_frame_mean_absolute_error_rgb": 0.2297197199192177,
+    "mp4_max_semantic_image_mean_absolute_error_rgb": 1.9913231770133477,
     "gif_all_frames_compared_to_resampled_mp4": true,
+    "gif_max_frame_mean_absolute_error_rgb": 0.049057195216049385,
     "source_sha256": {
-      "main": "2ae66a8ffba49707d965bafb766afc14a4efd7e80f299f5b0bfcad42b121cd03",
-      "foreground_only": "171c65dd72a88a9f8b4b9d0739bc7e33f4eb8a811a141cc89aceb2c08b25a5bb"
+      "main": "0853d81707271f6f8bdf6c38a35e7f1430d3c7c944a903e83c8990a2625c2677",
+      "foreground_only": "cd319b8f1c701d310e60b97853ec1c9ce249ea283c22bc8bbf2efdfb96c41cf6"
     },
     "preview_sha256": {
-      "gif": "ce6b9756558eb65771e53ad86102465120164099afd73b10639b9de24f73df7f",
-      "mp4": "f7e127338e4f3ecc8812663526f5941b3651f287c882dd39547983cbfbd4b5e6"
+      "l3-main-vs-fg.gif": "ab5ede8c488b603dff6ea8b19bc2fe78811d7f27d0f612f8ca524ee902cc8068",
+      "l3-main-vs-fg.mp4": "9f33eb5eff4a981515e7f8401da0679e4c0a9a334616f8a8b0179512fc1de4a6",
+      "l3-semantic-target.png": "70f051a2d0675e546a81f4ecce829033573364910190fc43a290da7a8a515115"
     },
     "file_bytes": {
-      "gif": 742570,
-      "mp4": 266553
+      "l3-main-vs-fg.gif": 831339,
+      "l3-main-vs-fg.mp4": 288096,
+      "l3-semantic-target.png": 34135
     }
   }
 ]

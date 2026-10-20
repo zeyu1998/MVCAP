@@ -4,8 +4,10 @@
 
 ### Added
 
-- Three paired looping examples in the README, covering text, object structure,
-  and human action, with synchronized MVCAP-Bench and MVCAP-Bench-FG panels.
+- Three looping examples with a Semantic Target image in the first column,
+  followed by synchronized MVCAP-Bench and MVCAP-Bench-FG panels.
+- A reproducible custom `CAPTCHA` text illustration, plus motorbike and kicking
+  examples from the frozen benchmark.
 - Full-size 30 fps video companions, sample provenance, and source acknowledgments.
 - An email contact for requesting the complete offline benchmark.
 

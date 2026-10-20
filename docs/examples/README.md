@@ -1,15 +1,31 @@
-# Paired MVCAP examples
+# MVCAP examples with semantic targets
 
-These three research visualizations show an original rigid-drift challenge
-beside its matched foreground-only control. The left panel is MVCAP-Bench;
-the right panel is MVCAP-Bench-FG. Each panel retains its entire source frame
-and its original three-second playback duration in the MP4 companions.
+Each visualization has three columns: **Semantic Target** (left),
+**MVCAP-Bench** (middle), and **MVCAP-Bench-FG** (right). The first column
+is a static illustration of the target. The other two columns show the
+rigid-drift challenge and its matched foreground-only control, retaining
+their entire source frames and original three-second playback duration
+in the MP4 companions.
 
 | Level | Sample ID | Target | Animation | 30 fps video |
 |---|---|---|---|---|
-| L1: coherent motion | `L1_000` | `WAJH` | [GIF](l1-main-vs-fg.gif) | [MP4](l1-main-vs-fg.mp4) |
-| L2: structural motion | `CHAIR_00` | Chair | [GIF](l2-main-vs-fg.gif) | [MP4](l2-main-vs-fg.mp4) |
-| L3: biological motion | `jump_90_07_poses_01` | Jump | [GIF](l3-main-vs-fg.gif) | [MP4](l3-main-vs-fg.mp4) |
+| L1: coherent motion | `L1_CAPTCHA_showcase` | `CAPTCHA` | [GIF](l1-main-vs-fg.gif) | [MP4](l1-main-vs-fg.mp4) |
+| L2: structural motion | `MOTORBIKE_07` | Motorbike | [GIF](l2-main-vs-fg.gif) | [MP4](l2-main-vs-fg.mp4) |
+| L3: biological motion | `kick_90_05_poses_03` | Kick | [GIF](l3-main-vs-fg.gif) | [MP4](l3-main-vs-fg.mp4) |
+
+The seven-letter L1 example is a custom illustration, outside the frozen
+200-sample L1 benchmark, which uses four-character text. It uses the official
+rigid-drift L1 renderer with seed 42; the control reuses exactly the same
+foreground dot texture and motion while removing the background. Generate
+the standalone pair and semantic image from the repository root:
+
+```bash
+python docs/examples/generate_l1_showcase.py --output-dir /tmp/mvcap-l1-showcase --seed 42
+```
+
+The L2 motorbike is also used in the poster. L2 and L3 are selected frozen
+benchmark instances; both conditions have been checked against their sample
+IDs, semantic targets, correct option IDs, and sets of six options.
 
 The targets are shown to explain the examples. Benchmark evaluation uses
 six candidate options and condition-specific answer labels. These examples
@@ -17,19 +33,28 @@ are selected for illustration and do not constitute a performance estimate.
 
 ## Playback and provenance
 
-- Each pair is encoded in a single animation, so the two panels play together.
+- All three columns are encoded in one animation. The target stays still while
+  the two video panels play together.
 - The MP4 companions retain all 90 frames of each source video in order. The native
   488 x 488 (L1) and 448 x 448 (L2/L3) panels are placed without resizing or
-  cropping in a 1024 x 640 canvas.
-- For a smaller README download, the GIF previews use 768 x 480 pixels, a
-  64-color palette, and 20 fps. Both panels use the same time samples and run
+  cropping in a 1536 x 640 canvas.
+- For a smaller README download, the GIF previews use 1152 x 480 pixels, a
+  128-color palette, and 20 fps. Both panels use the same time samples and run
   at the original speed for exactly 3 seconds. Palette conversion and resizing
   can slightly change appearance; use the 30 fps MP4 for full-size viewing.
-- The FG panels are produced by the project's matched control generators.
-  In particular, L2 FG uses the software silhouette renderer described in the
+- The benchmark FG panels are produced by the project's matched control generators.
+  L2 FG uses the software silhouette renderer described in the
   [FG generation guide](../../ablation_study/A/README.md).
+- The static target images are [solid text](l1-semantic-target.png), the
+  [matched object thumbnail](l2-semantic-target.png), and a
+  [matched mesh-rendered action pose](l3-semantic-target.png). The L2 RGBA
+  thumbnail is composited on white. The L3 image uses the same motion segment,
+  neutral SMPL body model, and normalized pose 40 (zero-based) as the target
+  option. It is rendered at 976 x 976 on white, then fitted within 390 x 390
+  inside a 488 x 488 image. These operations affect only the explanatory image.
 - [examples.json](examples.json) records sample IDs, source and output hashes,
-  dimensions, timing, and the completed GIF-to-video frame comparisons.
+  semantic-image provenance, dimensions, timing, and the completed frame
+  comparisons for both video panels and GIF previews.
 
 For the full offline MVCAP-Bench and its matched FG control, contact
 [zeyuzhang@sjtu.edu.cn](mailto:zeyuzhang@sjtu.edu.cn).
