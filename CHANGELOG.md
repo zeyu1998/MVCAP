@@ -4,8 +4,10 @@
 
 ### Added
 
-- Three looping examples with a Semantic Target image in the first column,
-  followed by synchronized MVCAP-Bench and MVCAP-Bench-FG panels.
+- Three looping examples with Semantic Target in the first column, followed
+  by synchronized MVCAP-Bench and MVCAP-Bench-FG panels. The L2 object rotates
+  and the L3 mesh body performs the matching motion in the first column.
+- Standalone Semantic Target GIFs and 30 fps videos for L2/L3.
 - A reproducible custom `CAPTCHA` text illustration, plus motorbike and kicking
   examples from the frozen benchmark.
 - Full-size 30 fps video companions, sample provenance, and source acknowledgments.

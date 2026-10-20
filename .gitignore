@@ -13,6 +13,7 @@ ablation_study/A/datasets/
 outputs/
 *.mp4
 !docs/examples/*-main-vs-fg.mp4
+!docs/examples/*-semantic-target.mp4
 *.avi
 *.mov
 *.npz

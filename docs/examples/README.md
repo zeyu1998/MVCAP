@@ -2,16 +2,17 @@
 
 Each visualization has three columns: **Semantic Target** (left),
 **MVCAP-Bench** (middle), and **MVCAP-Bench-FG** (right). The first column
-is a static illustration of the target. The other two columns show the
-rigid-drift challenge and its matched foreground-only control, retaining
-their entire source frames and original three-second playback duration
-in the MP4 companions.
+shows clean text for L1, a rotating colored object for L2, and a moving
+mesh-rendered body for L3. The L2/L3 targets follow the same normalized frame
+sequence as the challenge and its matched foreground-only control. The
+benchmark videos retain their entire source frames and original three-second
+playback duration in the MP4 companions.
 
-| Level | Sample ID | Target | Animation | 30 fps video |
-|---|---|---|---|---|
-| L1: coherent motion | `L1_CAPTCHA_showcase` | `CAPTCHA` | [GIF](l1-main-vs-fg.gif) | [MP4](l1-main-vs-fg.mp4) |
-| L2: structural motion | `MOTORBIKE_07` | Motorbike | [GIF](l2-main-vs-fg.gif) | [MP4](l2-main-vs-fg.mp4) |
-| L3: biological motion | `kick_90_05_poses_03` | Kick | [GIF](l3-main-vs-fg.gif) | [MP4](l3-main-vs-fg.mp4) |
+| Level | Sample ID | Target | Three-column GIF | 30 fps video | Semantic Target |
+|---|---|---|---|---|---|
+| L1: coherent motion | `L1_CAPTCHA_showcase` | `CAPTCHA` | [GIF](l1-main-vs-fg.gif) | [MP4](l1-main-vs-fg.mp4) | [PNG](l1-semantic-target.png) |
+| L2: structural motion | `MOTORBIKE_07` | Motorbike | [GIF](l2-main-vs-fg.gif) | [MP4](l2-main-vs-fg.mp4) | [GIF](l2-semantic-target.gif) / [MP4](l2-semantic-target.mp4) |
+| L3: biological motion | `kick_90_05_poses_03` | Kick | [GIF](l3-main-vs-fg.gif) | [MP4](l3-main-vs-fg.mp4) | [GIF](l3-semantic-target.gif) / [MP4](l3-semantic-target.mp4) |
 
 The seven-letter L1 example is a custom illustration, outside the frozen
 200-sample L1 benchmark, which uses four-character text. It uses the official
@@ -33,28 +34,32 @@ are selected for illustration and do not constitute a performance estimate.
 
 ## Playback and provenance
 
-- All three columns are encoded in one animation. The target stays still while
-  the two video panels play together.
+- All three columns are encoded in one animation. For L2/L3, the semantic target
+  and both benchmark panels move together; L1's clean text stays still.
 - The MP4 companions retain all 90 frames of each source video in order. The native
   488 x 488 (L1) and 448 x 448 (L2/L3) panels are placed without resizing or
   cropping in a 1536 x 640 canvas.
-- For a smaller README download, the GIF previews use 1152 x 480 pixels, a
-  128-color palette, and 20 fps. Both panels use the same time samples and run
+- For a smaller README download, the three-column GIF previews use 1152 x 480
+  pixels, a 128-color palette, and 20 fps. All moving panels use the same time samples and run
   at the original speed for exactly 3 seconds. Palette conversion and resizing
   can slightly change appearance; use the 30 fps MP4 for full-size viewing.
 - The benchmark FG panels are produced by the project's matched control generators.
   L2 FG uses the software silhouette renderer described in the
   [FG generation guide](../../ablation_study/A/README.md).
-- The static target images are [solid text](l1-semantic-target.png), the
-  [matched object thumbnail](l2-semantic-target.png), and a
-  [matched mesh-rendered action pose](l3-semantic-target.png). The L2 RGBA
-  thumbnail is composited on white. The L3 image uses the same motion segment,
-  neutral SMPL body model, and normalized pose 40 (zero-based) as the target
-  option. It is rendered at 976 x 976 on white, then fitted within 390 x 390
-  inside a 488 x 488 image. These operations affect only the explanatory image.
+- L2's semantic animation uses the same selected ShapeNet model and four-degree
+  Y-axis rotation per frame as the challenge. L3 uses the same motion segment,
+  neutral SMPL body model, and complete 90-pose normalized sequence as the
+  matching option and point-light challenge. Both are rendered at 976 x 976
+  on white, with one fixed crop and scale across the sequence, and fitted
+  within 390 x 390 inside 488 x 488 frames. These operations affect only the
+  explanatory renderings.
+- Standalone target GIFs use 366 x 366 pixels and the same 20 fps time samples.
+  Their 488 x 488 MP4 companions retain all 90 poses at 30 fps. Static snapshots
+  remain available for print: [L2 frame 0](l2-semantic-target.png) and
+  [L3 frame 40](l3-semantic-target.png), with zero-based frame numbering.
 - [examples.json](examples.json) records sample IDs, source and output hashes,
   semantic-image provenance, dimensions, timing, and the completed frame
-  comparisons for both video panels and GIF previews.
+  comparisons for all moving panels and GIF previews.
 
 For the full offline MVCAP-Bench and its matched FG control, contact
 [zeyuzhang@sjtu.edu.cn](mailto:zeyuzhang@sjtu.edu.cn).

@@ -22,8 +22,9 @@ runners.
 ## Examples
 
 Read each row from left to right: **Semantic Target**, **MVCAP-Bench**, and
-**MVCAP-Bench-FG**. A static target image explains the two synchronized
-motion stimuli, which play in a three-second loop at the original speed.
+**MVCAP-Bench-FG**. The L2/L3 semantic targets animate in sync with the two
+motion stimuli in a three-second loop at the original speed. L1 shows the
+clean target text.
 
 ### L1 · Coherent motion: text
 
@@ -36,15 +37,17 @@ gallery. The standard L1 benchmark uses four-character targets.
 
 ### L2 · Structural motion: object
 
-![L2 structural motion: a motorbike semantic target, the motion-defined challenge, and its foreground-only control.](docs/examples/l2-main-vs-fg.gif)
+![L2 structural motion: a rotating motorbike semantic target, synchronized with the motion-defined challenge and its foreground-only control.](docs/examples/l2-main-vs-fg.gif)
 
-[View the 30 fps video](docs/examples/l2-main-vs-fg.mp4)
+[View the 30 fps video](docs/examples/l2-main-vs-fg.mp4) ·
+[Semantic target GIF](docs/examples/l2-semantic-target.gif)
 
 ### L3 · Biological motion: action
 
-![L3 biological motion: a kicking human semantic target, the motion-defined challenge, and its foreground-only control.](docs/examples/l3-main-vs-fg.gif)
+![L3 biological motion: an animated kicking human semantic target, synchronized with the motion-defined challenge and its foreground-only control.](docs/examples/l3-main-vs-fg.gif)
 
-[View the 30 fps video](docs/examples/l3-main-vs-fg.mp4)
+[View the 30 fps video](docs/examples/l3-main-vs-fg.mp4) ·
+[Semantic target GIF](docs/examples/l3-semantic-target.gif)
 
 These are illustrative stimuli; the benchmark presents each challenge as
 a six-way matching task. See [sample details and source acknowledgments](docs/examples/README.md).
