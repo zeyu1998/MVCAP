@@ -33,6 +33,13 @@ files, SMPL parameters, or motion arrays to this Git repository. Any sharing
 of generated stimuli or derived annotations needs its own review against the
 applicable upstream terms; the code license does not resolve those rights.
 
+## Research visualizations
+
+The small [example gallery](docs/examples/README.md) contains rendered MVCAP
+stimuli with source acknowledgments and sample provenance. It does not include
+downloaded source datasets, motion arrays, meshes, or body-model parameters.
+The MIT code license does not replace the terms of the underlying resources.
+
 ## Software dependencies
 
 Dependencies are installed from their own distributions and retain their own

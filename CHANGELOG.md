@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Three paired looping examples in the README, covering text, object structure,
+  and human action, with synchronized MVCAP-Bench and MVCAP-Bench-FG panels.
+- Full-size 30 fps video companions, sample provenance, and source acknowledgments.
+- An email contact for requesting the complete offline benchmark.
+
 ## 1.0.0 — 2026-10-19
 
 ### Added

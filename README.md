@@ -3,7 +3,7 @@
 Generation code for **Invisible in Space, Visible in Time: Motion Vision
 CAPTCHA against GUI Agents** (ACM Multimedia 2026).
 
-[Paper](https://doi.org/10.1145/3767308.3835234) ·
+[Examples](#examples) · [Paper](https://doi.org/10.1145/3767308.3835234) ·
 [Citation](CITATION.bib) · [Parameters](docs/PARAMETERS.md) ·
 [Third-party resources](THIRD_PARTY.md) · [Validation](docs/VALIDATION.md)
 
@@ -18,6 +18,35 @@ This repository provides the **L1/L2/L3 generators** and the matched
 generation variants. The release is scoped to data generation; it does not
 contain the benchmark video archive, browser frontends, or agent evaluation
 runners.
+
+## Examples
+
+Watch the same instance with dynamic background camouflage (**left**) and
+its matched foreground-only control (**right**). Each pair plays together
+in a three-second loop at the original speed.
+
+### L1 · Coherent motion: text
+
+![L1 coherent motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target WAJH.](docs/examples/l1-main-vs-fg.gif)
+
+[View the 30 fps video](docs/examples/l1-main-vs-fg.mp4)
+
+### L2 · Structural motion: object
+
+![L2 structural motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target chair.](docs/examples/l2-main-vs-fg.gif)
+
+[View the 30 fps video](docs/examples/l2-main-vs-fg.mp4)
+
+### L3 · Biological motion: action
+
+![L3 biological motion: MVCAP-Bench on the left and MVCAP-Bench-FG on the right; target jump.](docs/examples/l3-main-vs-fg.gif)
+
+[View the 30 fps video](docs/examples/l3-main-vs-fg.mp4)
+
+These are illustrative stimuli; the benchmark presents each challenge as
+a six-way matching task. See [sample details and source acknowledgments](docs/examples/README.md).
+For access to the full offline benchmark, please contact
+[zeyuzhang@sjtu.edu.cn](mailto:zeyuzhang@sjtu.edu.cn).
 
 ## Quick start: L1 and its foreground-only control
 
