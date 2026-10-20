@@ -1,0 +1,128 @@
+[
+  {
+    "level": "L1",
+    "sample_id": "L1_000",
+    "target": "WAJH",
+    "source_condition": "rigid_drift",
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
+    "source_size": [
+      488,
+      488
+    ],
+    "gif_size": [
+      768,
+      480
+    ],
+    "gif_frames": 60,
+    "gif_fps": 20,
+    "mp4_size": [
+      1024,
+      640
+    ],
+    "mp4_frames": 90,
+    "mp4_fps": 30,
+    "gif": "l1-main-vs-fg.gif",
+    "mp4": "l1-main-vs-fg.mp4",
+    "gif_frame_delay_ms": 50,
+    "gif_max_frame_mean_absolute_error_rgb": 0.13340928819444445,
+    "gif_all_frames_compared_to_resampled_mp4": true,
+    "source_sha256": {
+      "main": "cc720d7cc7faa3d3d19759a2f2a3b2a742d655cc40f151165bb4a6676d70f8e3",
+      "foreground_only": "61c1d716824625672e88d12745f4e7e725251032ef3ae14621f319ca26b002d7"
+    },
+    "preview_sha256": {
+      "gif": "a1a491abd295c04031235bbe32b95fa4fb70d66437f7dc4cb88d5ebbbdc10531",
+      "mp4": "6cfafee4b1da9aa951a5ec7f0942e6ba04a5531d312c4477756bd1d9fb9f337c"
+    },
+    "file_bytes": {
+      "gif": 5302469,
+      "mp4": 3477409
+    }
+  },
+  {
+    "level": "L2",
+    "sample_id": "CHAIR_00",
+    "target": "CHAIR",
+    "source_condition": "rigid_drift",
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
+    "source_size": [
+      448,
+      448
+    ],
+    "gif_size": [
+      768,
+      480
+    ],
+    "gif_frames": 60,
+    "gif_fps": 20,
+    "mp4_size": [
+      1024,
+      640
+    ],
+    "mp4_frames": 90,
+    "mp4_fps": 30,
+    "gif": "l2-main-vs-fg.gif",
+    "mp4": "l2-main-vs-fg.mp4",
+    "gif_frame_delay_ms": 50,
+    "gif_max_frame_mean_absolute_error_rgb": 0.11109754774305555,
+    "gif_all_frames_compared_to_resampled_mp4": true,
+    "source_sha256": {
+      "main": "8694e91f9994274b4a6c118afa3f38b07aea1b56d11022d642aa163b058adc80",
+      "foreground_only": "c1ef2d88aa1098c8c5e67518a04ade8db3657e56ef72e33c061332523cbdc42b"
+    },
+    "preview_sha256": {
+      "gif": "3a1fb21bd4265ee8c0f467a69784c1ec721c74f3a083bd31734981f0265f44ee",
+      "mp4": "ed31c53aad5de2c4d7eda6ba50f488bf3a07fe817d63cfa91ae024d3e6352809"
+    },
+    "file_bytes": {
+      "gif": 5087550,
+      "mp4": 3151909
+    }
+  },
+  {
+    "level": "L3",
+    "sample_id": "jump_90_07_poses_01",
+    "target": "jump",
+    "source_condition": "rigid_drift",
+    "source_frames": 90,
+    "source_fps": 30,
+    "duration_seconds": 3,
+    "source_size": [
+      448,
+      448
+    ],
+    "gif_size": [
+      768,
+      480
+    ],
+    "gif_frames": 60,
+    "gif_fps": 20,
+    "mp4_size": [
+      1024,
+      640
+    ],
+    "mp4_frames": 90,
+    "mp4_fps": 30,
+    "gif": "l3-main-vs-fg.gif",
+    "mp4": "l3-main-vs-fg.mp4",
+    "gif_frame_delay_ms": 50,
+    "gif_max_frame_mean_absolute_error_rgb": 0.02966941550925926,
+    "gif_all_frames_compared_to_resampled_mp4": true,
+    "source_sha256": {
+      "main": "2ae66a8ffba49707d965bafb766afc14a4efd7e80f299f5b0bfcad42b121cd03",
+      "foreground_only": "171c65dd72a88a9f8b4b9d0739bc7e33f4eb8a811a141cc89aceb2c08b25a5bb"
+    },
+    "preview_sha256": {
+      "gif": "ce6b9756558eb65771e53ad86102465120164099afd73b10639b9de24f73df7f",
+      "mp4": "f7e127338e4f3ecc8812663526f5941b3651f287c882dd39547983cbfbd4b5e6"
+    },
+    "file_bytes": {
+      "gif": 742570,
+      "mp4": 266553
+    }
+  }
+]
