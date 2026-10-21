@@ -61,8 +61,8 @@ are selected for illustration and do not constitute a performance estimate.
   semantic-image provenance, dimensions, timing, and the completed frame
   comparisons for all moving panels and GIF previews.
 
-For the full offline MVCAP-Bench and its matched FG control, contact
-[zeyuzhang@sjtu.edu.cn](mailto:zeyuzhang@sjtu.edu.cn).
+The full offline MVCAP-Bench and its matched FG control are
+[publicly downloadable](../BENCHMARK.md).
 
 ## Source acknowledgments
 

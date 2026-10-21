@@ -1,5 +1,13 @@
 # Changelog
 
+## MVCAP-Bench v1.0 - 2026-10-21
+
+- Public GitHub Release download of the original paired offline benchmark:
+  600 tasks across L1/L2/L3, 1,200 main/FG challenge videos, option media,
+  six-choice annotations, ground truth, and source mappings.
+- Archive checksum, validation report, and a dataset loading guide.
+- Direct download links replace the email-only dataset access instructions.
+
 ## Unreleased
 
 ### Added

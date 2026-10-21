@@ -3,7 +3,7 @@
 Generation code for **Invisible in Space, Visible in Time: Motion Vision
 CAPTCHA against GUI Agents** (ACM Multimedia 2026).
 
-[Examples](#examples) · [Paper](https://doi.org/10.1145/3767308.3835234) ·
+[Dataset](#download-mvcap-bench) · [Examples](#examples) · [Paper](https://doi.org/10.1145/3767308.3835234) ·
 [Citation](CITATION.bib) · [Parameters](docs/PARAMETERS.md) ·
 [Third-party resources](THIRD_PARTY.md) · [Validation](docs/VALIDATION.md)
 
@@ -15,9 +15,23 @@ biological motion (L3).
 This repository provides the **L1/L2/L3 generators** and the matched
 **foreground-only control (MVCAP-Bench-FG)**. It includes the main
 `rigid_drift` condition and the existing `perturbed_drift` and `random_walk`
-generation variants. The release is scoped to data generation; it does not
-contain the benchmark video archive, browser frontends, or agent evaluation
-runners.
+generation variants. The fixed offline benchmark is publicly available as a
+separate GitHub Release download. Browser frontends and agent evaluation runners
+are outside this code release.
+
+## Download MVCAP-Bench
+
+**[Download the complete offline benchmark (ZIP, 1.82 GB)](https://github.com/zeyu1998/MVCAP/releases/download/bench-v1.0/mvcap-bench-offline-v1.0.zip)**
+
+[Release page](https://github.com/zeyu1998/MVCAP/releases/tag/bench-v1.0) ·
+[SHA-256 checksum](https://github.com/zeyu1998/MVCAP/releases/download/bench-v1.0/mvcap-bench-offline-v1.0.zip.sha256) ·
+[Dataset guide](docs/BENCHMARK.md)
+
+The archive contains **600 paired tasks**: 200 per level, with each original
+MVCAP-Bench challenge paired with its MVCAP-Bench-FG control. It includes
+**1,200 challenge videos**, option images/videos, six-choice annotations,
+ground truth, source mappings, and integrity checks. Download access is public;
+no email request is needed.
 
 ## Examples
 
@@ -51,8 +65,7 @@ gallery. The standard L1 benchmark uses four-character targets.
 
 These are illustrative stimuli; the benchmark presents each challenge as
 a six-way matching task. See [sample details and source acknowledgments](docs/examples/README.md).
-For access to the full offline benchmark, please contact
-[zeyuzhang@sjtu.edu.cn](mailto:zeyuzhang@sjtu.edu.cn).
+The [complete offline benchmark](#download-mvcap-bench) is publicly downloadable.
 
 ## Quick start: L1 and its foreground-only control
 
@@ -123,10 +136,10 @@ See the [FG guide](ablation_study/A/README.md) for metadata paths and pairing.
   draws are consumed for later videos.
 - [docs/PARAMETERS.md](docs/PARAMETERS.md) records the main rendering parameters
   and entry points. Alternative motion regimes write to separate directories.
-- The publication benchmark used fixed, curated samples. This source release
-  regenerates stimuli and does not bundle that frozen media archive or its
-  licensed selection inputs. L3 curation and any reduction to 200 samples
-  must be performed explicitly on the generated pool.
+- The [offline benchmark download](docs/BENCHMARK.md) provides the fixed,
+  curated samples for comparison with the paper. The generators create new
+  stimuli; L3 curation and any reduction to 200 samples must be performed
+  explicitly on the generated pool.
 - Rendering can vary with fonts, source-asset versions, OpenGL drivers, and
   FFmpeg. Seeded regeneration is not a promise of byte-identical reproduction
   of the previously rendered benchmark.

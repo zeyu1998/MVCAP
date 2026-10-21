@@ -35,6 +35,12 @@ applicable upstream terms; the code license does not resolve those rights.
 
 ## Research visualizations
 
+The [public offline benchmark](docs/BENCHMARK.md) distributes rendered challenge
+and option media, six-choice annotations, ground truth, and provenance. It
+contains no raw ShapeNet meshes, downloaded BABEL annotation files, motion
+arrays, or SMPL body-model parameters. The underlying resources retain their
+own terms and acknowledgments; the MIT code license does not relicense them.
+
 The small [example gallery](docs/examples/README.md) contains rendered MVCAP
 stimuli with source acknowledgments and sample provenance. It does not include
 downloaded source datasets, motion arrays, meshes, or body-model parameters.
